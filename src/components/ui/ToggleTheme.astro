@@ -1,0 +1,46 @@
+---
+import { Moon, Sun } from "lucide-react";
+---
+
+<div class="bg-white dark:bg-black">
+  <button
+    toggle-theme
+    class="p-1 rounded border border-neutral-600 hover:bg-neutral-200 dark:invert"
+  >
+    <Moon size="24" className="moon hidden" color="#525252" />
+    <Sun size="24" className="sun" color="#525252" />
+  </button>
+</div>
+
+<script>
+  const themeToggle = document.querySelectorAll("[toggle-theme]");
+  const htmlElement = document.documentElement;
+
+  const theme = localStorage.getItem("theme");
+
+  if (theme === "dark") {
+    htmlElement.classList.add("dark");
+  }
+
+  themeToggle.forEach((toggle) => {
+    const moon = toggle.querySelector(".moon");
+    const sun = toggle.querySelector(".sun");
+    toggle.addEventListener("click", () => {
+      toogleTheme(moon, sun);
+    });
+  });
+
+  function toogleTheme(moon, sun) {
+    htmlElement.classList.toggle("dark");
+    const newTheme = htmlElement.classList.contains("dark") ? "dark" : "light";
+    localStorage.setItem("theme", newTheme);
+
+    if (newTheme === "light") {
+      moon.classList.remove("hidden");
+      sun.classList.add("hidden");
+    } else {
+      moon.classList.add("hidden");
+      sun.classList.remove("hidden");
+    }
+  }
+</script>

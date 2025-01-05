@@ -1,5 +1,8 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
+import ToggleTheme from "../components/ui/ToggleTheme.astro";
+import ToggleLanguage from "../components/ui/ToggleLanguage.astro";
+import Topbar from "../components/ui/Topbar.astro";
 ---
 
 <html lang="en">
@@ -7,22 +10,14 @@ import BaseHead from "../components/BaseHead.astro";
     <BaseHead />
   </head>
 
-  <body class="bg-white dark:bg-black">
+  <body class="bg-white dark:bg-black relative">
+    <!--<Topbar />-->
     <slot />
-  </body><script>
-    const themeToggle = document.getElementById("toggle-theme");
-    const htmlElement = document.documentElement;
-
-    if (localStorage.getItem("theme") === "dark") {
-      htmlElement.classList.add("dark");
-    }
-
-    themeToggle.addEventListener("click", () => {
-      htmlElement.classList.toggle("dark");
-      const newTheme = htmlElement.classList.contains("dark")
-        ? "dark"
-        : "light";
-      localStorage.setItem("theme", newTheme);
-    });
-  </script>
+    <div
+      class="md:hidden fixed p-4 bottom-0 w-full flex justify-between z-50 pointer-events-auto"
+    >
+      <ToggleLanguage />
+      <ToggleTheme />
+    </div>
+  </body>
 </html>
