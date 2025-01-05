@@ -1,0 +1,133 @@
+---
+import { articles } from "../../data/articles.json";
+import { works } from "../../data/works.json";
+import { projects } from "../../data/projects.json";
+import { contact } from "../../data/contact.json";
+---
+
+<section>
+  <div class="mx-auto max-w-7xl px-8 pt-8 pb-12">
+    <div class="mx-auto max-w-xl">
+      <div class="grid gap-12 md:gap-24">
+        <div class="text-sm font-light">
+          <h3 class="text-black dark:text-white">Artículos</h3>
+          <div class="grid gap-6 mt-3">
+            {
+              articles.map((template) => (
+                <>
+                  <div class="text-neutral-500  items-start grid grid-cols-1 md:grid-cols-3">
+                    <div>
+                      <p class="text-neutral-500 dark:text-neutral-400">{template.date}</p>
+                    </div>
+                    <div class="md:col-span-2 w-full">
+                      <p class="text-black dark:text-white">
+                        <a
+                          href={template.link}
+                          target="_blank"
+                          class="underline hover:no-underline duration-200 after:content-['_↗']">
+                          {template.title}
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </>
+              ))
+            }
+          </div>
+        </div>
+        <div class="text-sm font-light">
+          <h3 class="text-black dark:text-white">Proyectos</h3>
+          <div class="grid gap-6 mt-3">
+            {
+              projects.map((template) => (
+                <>
+                  <div class="text-neutral-500  items-start grid grid-cols-1 md:grid-cols-3">
+                    <div>
+                      <p class="text-neutral-500 dark:text-neutral-400">
+                        {template.state}
+                      </p>
+                    </div>
+                    <div class="md:col-span-2 w-full">
+                      <p class="text-black dark:text-white">
+                        {template.title}
+                      </p>
+                      <div class="flex gap-2 flex-wrap">
+                        {
+                          Object.entries(template.link).map(index => (
+                            <a 
+                              class="bg-neutral-200 hover:bg-neutral-300 text-black 
+                                px-1 rounded-md dark:text-white dark:bg-neutral-700 
+                                dark:hover:bg-neutral-600"
+                              href=`${index[1]}`
+                              target="_blank">
+                              {index[0]}↗
+                            </a>
+                          ))
+                        }
+                      </div>
+                    </div>
+                  </div>
+                </>
+              ))
+            }
+          </div>
+        </div>
+        <div class="text-sm font-light">
+          <h3 class="text-black dark:text-white">Trabajos</h3>
+          <div class="grid gap-6 mt-3">
+            {
+              works.map((template) => (
+                <>
+                  <div class="text-neutral-500  items-start grid grid-cols-1 md:grid-cols-3">
+                    <div>
+                      <p class="text-neutral-500 dark:text-neutral-400">
+                        {template.status}
+                      </p>
+                    </div>
+                    <div class="md:col-span-2 w-full">
+                      <p class="text-black dark:text-white">
+                        <a
+                          href={template.link}
+                          target="_blank"
+                          class="underline hover:no-underline duration-200 after:content-['_↗']">
+                          {template.title}
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </>
+              ))
+            }
+          </div>
+        </div>
+        <div class="text-sm font-light">
+          <h3 class="text-black dark:text-white">Contactos</h3>
+          <div class="grid gap-6 mt-3">
+            {
+              contact.map((template) => (
+                <>
+                  <div class="text-neutral-500  items-start grid grid-cols-1 md:grid-cols-3">
+                    <div>
+                      <p class="text-neutral-500 dark:text-neutral-400">{template.type}</p>
+                    </div>
+                    <div class="md:col-span-2 w-full">
+                      <p class="text-black dark:text-white">
+                        <a
+                          href={template.link}
+                          target="_blank"
+                          title={template.type}
+                          class="underline hover:no-underline duration-200 after:content-['_↗']">
+                          {template.title}
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
