@@ -1,3 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;
+  --line-height-xs: 1rem;
+
+  --font-size-sm: 0.875rem;
+  --line-height-sm: 1.5rem;
+
+  --font-size-base: 1rem;
+  --line-height-base: 1.75rem;
+
+  --font-size-lg: 1.125rem;
+  --line-height-lg: 2rem;
+
+  --font-size-xl: 1.25rem;
+  --line-height-xl: 2rem;
+
+  --font-size-2xl: 1.5rem;
+  --line-height-2xl: 2rem;
+
+  --font-size-3xl: 2rem;
+  --line-height-3xl: 2.5rem;
+
+  --font-size-4xl: 2.5rem;
+  --line-height-4xl: 3.5rem;
+
+  --font-size-5xl: 3rem;
+  --line-height-5xl: 3.5rem;
+
+  --font-size-6xl: 3.75rem;
+  --line-height-6xl: 1;
+
+  --font-size-7xl: 4.5rem;
+  --line-height-7xl: 1.1;
+
+  --font-size-8xl: 6rem;
+  --line-height-8xl: 1;
+
+  --font-size-9xl: 8rem;
+  --line-height-9xl: 1;
+
+  /* Colors */
+  --color-black: #222222;
+  --color-white: #f1f1f1;
+}

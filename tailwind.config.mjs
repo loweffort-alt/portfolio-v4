@@ -7,88 +7,24 @@ export default {
   darkMode: 'selector',
   theme: {
     fontSize: {
-      xs: [
-        "0.75rem",
-        {
-          lineHeight: "1rem",
-        },
-      ],
-      sm: [
-        "0.875rem",
-        {
-          lineHeight: "1.5rem",
-        },
-      ],
-      base: [
-        "1rem",
-        {
-          lineHeight: "1.75rem",
-        },
-      ],
-      lg: [
-        "1.125rem",
-        {
-          lineHeight: "2rem",
-        },
-      ],
-      xl: [
-        "1.25rem",
-        {
-          lineHeight: "2rem",
-        },
-      ],
-      "2xl": [
-        "1.5rem",
-        {
-          lineHeight: "2rem",
-        },
-      ],
-      "3xl": [
-        "2rem",
-        {
-          lineHeight: "2.5rem",
-        },
-      ],
-      "4xl": [
-        "2.5rem",
-        {
-          lineHeight: "3.5rem",
-        },
-      ],
-      "5xl": [
-        "3rem",
-        {
-          lineHeight: "3.5rem",
-        },
-      ],
-      "6xl": [
-        "3.75rem",
-        {
-          lineHeight: "1",
-        },
-      ],
-      "7xl": [
-        "4.5rem",
-        {
-          lineHeight: "1.1",
-        },
-      ],
-      "8xl": [
-        "6rem",
-        {
-          lineHeight: "1",
-        },
-      ],
-      "9xl": [
-        "8rem",
-        {
-          lineHeight: "1",
-        },
-      ],
+      xs: ['var(--font-size-xs)', { lineHeight: 'var(--line-height-xs)' }],
+      sm: ['var(--font-size-sm)', { lineHeight: 'var(--line-height-sm)' }],
+      base: ['var(--font-size-base)', { lineHeight: 'var(--line-height-base)' }],
+      lg: ['var(--font-size-lg)', { lineHeight: 'var(--line-height-lg)' }],
+      xl: ['var(--font-size-xl)', { lineHeight: 'var(--line-height-xl)' }],
+      '2xl': ['var(--font-size-2xl)', { lineHeight: 'var(--line-height-2xl)' }],
+      '3xl': ['var(--font-size-3xl)', { lineHeight: 'var(--line-height-3xl)' }],
+      '4xl': ['var(--font-size-4xl)', { lineHeight: 'var(--line-height-4xl)' }],
+      '5xl': ['var(--font-size-5xl)', { lineHeight: 'var(--line-height-5xl)' }],
+      '6xl': ['var(--font-size-6xl)', { lineHeight: 'var(--line-height-6xl)' }],
+      '7xl': ['var(--font-size-7xl)', { lineHeight: 'var(--line-height-7xl)' }],
+      '8xl': ['var(--font-size-8xl)', { lineHeight: 'var(--line-height-8xl)' }],
+      '9xl': ['var(--font-size-9xl)', { lineHeight: 'var(--line-height-9xl)' }],
     },
     extend: {
       colors: {
         black: "#222222",
+        white: "#f1f1f1",
       },
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],

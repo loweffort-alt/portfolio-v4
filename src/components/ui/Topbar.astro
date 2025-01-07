@@ -4,13 +4,14 @@ import ToggleLanguage from "./ToggleLanguage.astro";
 ---
 
 <header
-  class="mx-auto max-w-xl md:flex md:items-center md:justify-between md:space-x-5 bg-red-200 sticky"
+  id="topbar"
+  class="mx-auto max-w-xl md:flex md:items-center md:justify-between md:space-x-5 pt-12 lg:pt-24 sticky -top-9 lg:-top-[5.5rem]"
 >
-  <div class="flex items-center space-x-5">
-    <div class="flex-shrink-0">
+  <div class="flex items-center gap-5">
+    <div class="shrink-0">
       <div class="relative">
         <img
-          class="h-16 w-16 lg:h-24 lg:w-24 rounded-full border border-white/10"
+          class="h-16 w-16 lg:h-24 lg:w-24 rounded-full aspect-square transition-all duration-300 border border-white/10"
           src="/images/circle-logo.png"
           alt="image"
         />
@@ -20,14 +21,17 @@ import ToggleLanguage from "./ToggleLanguage.astro";
       </div>
     </div>
 
-    <div class="pt-1.5">
-      <h1 class="lg:text-xl text-black dark:text-white">
+    <div class="text-right md:text-left">
+      <h1
+        id="topbar-title"
+        class="lg:text-xl text-black dark:text-white text-nowrap"
+      >
         💻 Alexander Farfán Navarro
       </h1>
-      <h2 class="text-sm font-light text-neutral-500">
+      <h2 id="topbar-role" class="text-sm font-light text-neutral-500">
         Ingeniero de Software | Físico
       </h2>
-      <p>
+      <p id="topbar-link">
         <a
           class="text-xs underline hover:no-underline duration-200 dark:text-white"
           href="https://alexfarfan.site/">alexfarfan.site</a
@@ -35,8 +39,113 @@ import ToggleLanguage from "./ToggleLanguage.astro";
       </p>
     </div>
   </div>
-  <div class="gap-4 hidden md:flex">
-    <ToggleTheme client:load />
+  <div id="topbar-buttons" class="gap-4 hidden md:flex pb-2">
+    <ToggleTheme />
     <ToggleLanguage />
   </div>
 </header>
+
+<style>
+  #topbar {
+    transition: all 0.4s ease;
+  }
+
+  #topbar #topbar-title,
+  #topbar #topbar-role {
+    transition: all 0.4s ease;
+  }
+
+  #topbar #topbar-link {
+    height: 1.5rem;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.4s ease;
+  }
+
+  #topbar #topbar-buttons {
+    transition: transform 0.4s ease;
+  }
+
+  #topbar.scrolled {
+    padding-bottom: 0.5rem;
+    background-color: var(--color-white);
+    transition: all 0.4s ease;
+  }
+
+  html.dark #topbar.scrolled {
+    background-color: var(--color-black);
+  }
+
+  #topbar.scrolled img {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  #topbar.scrolled #topbar-title {
+    font-size: var(--font-size-base);
+    line-height: 1.25rem;
+  }
+
+  #topbar.scrolled #topbar-role {
+    font-size: var(--font-size-xs);
+    line-height: 1.5rem;
+  }
+
+  #topbar.scrolled #topbar-link {
+    height: 0px;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  #topbar.scrolled #topbar-buttons {
+    transform: scale(0.85);
+  }
+
+  @media (max-width: 768px) {
+    #topbar {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    #topbar.scrolled {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    #topbar > :nth-child(1) {
+      justify-content: space-between;
+    }
+
+    #topbar.scrolled img {
+      height: 3.5rem;
+      width: 3.5rem;
+    }
+
+    #topbar.scrolled #topbar-title {
+      font-size: var(--font-size-sm);
+      line-height: 1rem;
+    }
+
+    #topbar.scrolled #topbar-role {
+      line-height: 1.25rem;
+    }
+  }
+</style>
+
+<script>
+  const topbar = document.querySelector("#topbar");
+
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      topbar?.classList.toggle("scrolled", !entry.isIntersecting);
+    });
+  }, options);
+
+  topbar ? observer.observe(topbar) : console.log("no existe topbar");
+</script>
