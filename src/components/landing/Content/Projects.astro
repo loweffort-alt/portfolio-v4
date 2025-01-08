@@ -1,0 +1,41 @@
+---
+import { projects } from "@/data/projects.json";
+---
+
+<div class="text-sm font-light">
+  <h3 class="text-black dark:text-white">Proyectos</h3>
+  <div class="grid gap-6 mt-3">
+    {
+      projects.map((template) => (
+        <>
+          <div class="text-neutral-500  items-start grid grid-cols-1 md:grid-cols-3">
+            <div>
+              <p class="text-neutral-500 dark:text-neutral-400">
+                {template.state}
+              </p>
+            </div>
+            <div class="md:col-span-2 w-full">
+              <p class="text-black dark:text-white">
+                {template.title}
+              </p>
+              <div class="flex gap-2 flex-wrap">
+                {
+                  Object.entries(template.link).map(index => (
+                    <a 
+                      class="bg-neutral-200 hover:bg-neutral-300 text-black 
+                        px-1 rounded-md dark:text-white dark:bg-neutral-700 
+                        dark:hover:bg-neutral-600"
+                      href=`${index[1]}`
+                      target="_blank">
+                      {index[0]}↗
+                    </a>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+        </>
+      ))
+    }
+  </div>
+</div>

@@ -6,12 +6,12 @@ export interface Template {
 const one: Template = {
   link: "https://lalaeventplanner.com/",
   title: "Lala Event Planner",
-  status: "En Progreso",
+  status: "Terminado",
 };
 const two: Template = {
-  link: "/",
+  link: "https://fanaweb.vercel.app/",
   title: "FANA Automotriz",
-  status: "En Progreso",
+  status: "Terminado",
 };
 const three: Template = {
   link: "https://service-entretien-sjs.vercel.app/",
@@ -21,7 +21,7 @@ const three: Template = {
 const four: Template = {
   link: "https://loweffort-alt.github.io/web-accel/",
   title: "Android | QuakeSense",
-  status: "Terminado",
+  status: "En Proceso",
 };
 export const bytitle = {
   one,

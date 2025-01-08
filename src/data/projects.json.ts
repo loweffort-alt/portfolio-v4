@@ -41,10 +41,21 @@ const three: Template = {
   title: "QuakeSense: Centro de Monitoreo de Estaciones Sísmicas",
   state: "En progreso",
 };
+const four: Template = {
+  link: {
+    Github: "https://github.com/loweffort-alt/NeoDevs-HeroAI",
+    Doc: "/",
+    Server: "https://github.com/rafaelcg14/hero-ai-backend",
+    Cliente: "https://neo-devs-hero-ai.vercel.app/",
+  },
+  title: "HeroAI: Una IA que convierte tus notas en preguntas",
+  state: "Terminado",
+};
 
 export const bytitle = {
   one,
   two,
   three,
+  four,
 };
 export const projects = Object.values(bytitle);

@@ -8,11 +8,6 @@ const one: Template = {
   type: "Github",
   title: "loweffort-alt",
 };
-const two: Template = {
-  link: "https://loweffort.notion.site/Bienvenido-emprendedor-b6e0e8635bfd412bab98cb731372e3d9",
-  type: "Freelance",
-  title: "¡Dale Vida a tu Presencia en la Web!",
-};
 const three: Template = {
   link: "mailto:farfan_alexander@outlook.com",
   type: "Email",
@@ -30,7 +25,6 @@ const five: Template = {
 };
 export const bytype = {
   one,
-  two,
   three,
   five,
   four,
