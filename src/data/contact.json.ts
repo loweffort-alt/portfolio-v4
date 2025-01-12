@@ -19,7 +19,7 @@ const three: Template = {
   title: "farfan_alexander@outlook.com",
 };
 const four: Template = {
-  link: "https://drive.google.com/file/d/1xTSWrMKQZemCGhtFT4ba5vvw1T90qNZ-/view?usp=sharing",
+  link: "/cv",
   type: "CV",
   title: "Darío Alexander Farfán Navarro",
 };
