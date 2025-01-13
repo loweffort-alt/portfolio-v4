@@ -1,9 +1,13 @@
 ---
 import { contact } from "@/data/contact.json";
+
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="text-sm font-light">
-  <h3 class="text-black dark:text-white">Contactos</h3>
+  <h3 class="text-black dark:text-white">{t("hSix")}</h3>
   <div class="grid gap-6 mt-3">
     {
       contact.map((template) => (

@@ -1,6 +1,10 @@
 ---
 import ToggleTheme from "./ToggleTheme.astro";
 import ToggleLanguage from "./ToggleLanguage.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <header
@@ -29,7 +33,7 @@ import ToggleLanguage from "./ToggleLanguage.astro";
         💻 Alexander Farfán Navarro
       </h1>
       <h2 id="topbar-role" class="text-sm font-light text-neutral-500">
-        Ingeniero de Software | Físico
+        {t("role")}
       </h2>
       <p id="topbar-link">
         <a

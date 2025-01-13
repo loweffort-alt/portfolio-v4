@@ -1,9 +1,13 @@
 ---
 import { articles } from "@/data/articles.json";
+
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="text-sm font-light">
-  <h3 class="text-black dark:text-white">Artículos</h3>
+  <h3 class="text-black dark:text-white">{t("hFive")}</h3>
   <div class="grid gap-6 mt-3">
     {
       articles.map((template) => (

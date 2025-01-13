@@ -1,37 +1,31 @@
+---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <section>
   <div class="mx-auto max-w-7xl px-8 pb-12">
     <div class="mx-auto max-w-xl">
       <div>
         <div class="pt-16 text-sm font-light">
-          <p class="text-black dark:text-white font-semibold">Acerca de mí</p>
+          <p class="text-black dark:text-white font-semibold">
+            {t("hOne")}
+          </p>
           <div class="text-neutral-500 dark:text-neutral-400 space-y-3 mt-3">
             <p>
-              ¡Hola! Soy un ingeniero de software freelance con una pasión por
-              la creación de soluciones tecnológicas innovadoras. Me gusta
-              definirme como una persona asertiva, paciente y con conocimiento
-              sobre diversos temas.
+              {t("about")}
             </p>
             <p>
-              Con más de 2 años de experiencia en la industria, he trabajado en
-              una amplia gama de proyectos que me han permitido desarrollar
-              habilidades sólidas en el diseño, desarrollo y entrega de software
-              de alta calidad.
+              {t("experience")}
             </p>
-            <!--<p>-->
-            <!--  ¿Quieres contratarme? Puedes ver mis servicios y precios dando-->
-            <!--  click-->
-            <!--  <a-->
-            <!--    href="https://loweffort.notion.site/Bienvenido-emprendedor-b6e0e8635bfd412bab98cb731372e3d9"-->
-            <!--    class="text-sm underline hover:no-underline duration-200 dark:text-white"-->
-            <!--    target="_blank"-->
-            <!--  >-->
-            <!--    aquí-->
-            <!--  </a>-->
-            <!--</p>-->
           </div>
         </div>
         <div class="mt-8 text-sm font-light">
-          <p class="text-black dark:text-white font-semibold">Habilidades</p>
+          <p class="text-black dark:text-white font-semibold">
+            {t("hTwo")}
+          </p>
           <div class="text-neutral-500 dark:text-neutral-400 space-y-3 mt-3">
             <p>
               <span class="text-black dark:text-white">Mobile:</span>
@@ -46,12 +40,12 @@
               NodeJS, Express, Mysql, PostgresSQL, MongoDB, Firebase
             </p>
             <p>
-              <span class="text-black dark:text-white">Herramientas:</span>
-              Linux, Git, Neovim, Docker, Figma, Postman, Notion, Google Analytics
+              <span class="text-black dark:text-white">{t("pTwo")}:</span>
+              Hostinger, Github Pages, Render, Vercel
             </p>
             <p>
-              <span class="text-black dark:text-white">Despliegue:</span>
-              Hostinger, Github Pages, Render, Vercel
+              <span class="text-black dark:text-white">{t("pOne")}:</span>
+              Linux, Git, Neovim, Docker, Figma, Postman, Notion, Google Analytics
             </p>
           </div>
         </div>

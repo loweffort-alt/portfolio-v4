@@ -8,7 +8,8 @@ export interface Template {
     Cliente?: string;
   };
   title: string;
-  state: string;
+  titleEng?: string;
+  state: number;
 }
 const one: Template = {
   link: {
@@ -19,7 +20,8 @@ const one: Template = {
     Cliente: "https://loweffort-alt.github.io/ToDoLock-client/",
   },
   title: "ToDoLock: Gestión de Tareas con Sesiones de Usuario",
-  state: "Terminado",
+  titleEng: "ToDoLock: Task Management with User Sessions",
+  state: 1,
 };
 const two: Template = {
   link: {
@@ -29,7 +31,8 @@ const two: Template = {
     Cliente: "/",
   },
   title: "Check-In Virtual: ¡Listos para Despegar!",
-  state: "En progreso",
+  titleEng: "Virtual Check-In: Ready for Takeoff!",
+  state: 0,
 };
 const three: Template = {
   link: {
@@ -39,7 +42,8 @@ const three: Template = {
     Cliente: "https://loweffort-alt.github.io/web-accel/",
   },
   title: "QuakeSense: Centro de Monitoreo de Estaciones Sísmicas",
-  state: "En progreso",
+  titleEng: "QuakeSense: Seismic Station Monitoring Center",
+  state: 0,
 };
 const four: Template = {
   link: {
@@ -49,7 +53,8 @@ const four: Template = {
     Cliente: "https://neo-devs-hero-ai.vercel.app/",
   },
   title: "HeroAI: Una IA que convierte tus notas en preguntas",
-  state: "Terminado",
+  titleEng: "HeroAI: An AI that turns your notes into questions",
+  state: 1,
 };
 
 export const bytitle = {

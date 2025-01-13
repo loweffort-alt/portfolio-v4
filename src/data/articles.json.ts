@@ -5,7 +5,7 @@ export interface Template {
 }
 const one: Template = {
   link: "https://loweffort.notion.site/Introducci-n-a-NodeJS-06f3552c1bde4fbdbf5ca1301bc8d747?pvs=4",
-  title: "Introducción a NodeJS",
+  title: "Introduction to NodeJS",
   date: "13.02.2023",
 };
 const two: Template = {

@@ -14,9 +14,9 @@ const three: Template = {
   title: "farfan_alexander@outlook.com",
 };
 const four: Template = {
-  link: "/cv",
+  link: "https://media.licdn.com/dms/document/media/v2/D4E2DAQEHrxSeykE8VA/profile-treasury-document-pdf-analyzed/profile-treasury-document-pdf-analyzed/0/1736757150004?e=1737590400&v=beta&t=5aYwMNB5fMuVXW5-ITkx7rBPje0rwAMsXGmS9eI7BdI",
   type: "CV",
-  title: "Darío Alexander Farfán Navarro",
+  title: "Curriculum Vitae",
 };
 const five: Template = {
   link: "https://www.linkedin.com/in/alexfarfan/",
@@ -24,9 +24,9 @@ const five: Template = {
   title: "alexfarfan",
 };
 export const bytype = {
-  one,
-  three,
   five,
+  one,
   four,
+  three,
 };
 export const contact = Object.values(bytype);

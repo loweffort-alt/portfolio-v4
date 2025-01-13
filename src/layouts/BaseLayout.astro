@@ -2,9 +2,12 @@
 import BaseHead from "../components/BaseHead.astro";
 import ToggleTheme from "../components/ui/ToggleTheme.astro";
 import ToggleLanguage from "../components/ui/ToggleLanguage.astro";
+
+import { getLangFromUrl } from "@/i18n/utils";
+const lang = getLangFromUrl(Astro.url);
 ---
 
-<html lang="en">
+<html lang={lang} class="dark">
   <head>
     <BaseHead />
   </head>
@@ -12,9 +15,13 @@ import ToggleLanguage from "../components/ui/ToggleLanguage.astro";
   <body class="bg-white dark:bg-black relative transition-all duration-300">
     <slot />
     <div
-      class="md:hidden fixed p-4 bottom-0 w-full flex justify-between z-50 pointer-events-auto"
+      class="md:hidden fixed p-4 bottom-0 left-0 flex justify-between pointer-events-auto"
     >
       <ToggleLanguage />
+    </div>
+    <div
+      class="md:hidden fixed p-4 bottom-0 right-0 flex justify-between pointer-events-auto"
+    >
       <ToggleTheme />
     </div>
   </body>

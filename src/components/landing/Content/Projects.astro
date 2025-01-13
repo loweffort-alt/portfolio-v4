@@ -1,9 +1,13 @@
 ---
 import { projects } from "@/data/projects.json";
+
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="text-sm font-light">
-  <h3 class="text-black dark:text-white">Proyectos</h3>
+  <h3 class="text-black dark:text-white">{t("hFour")}</h3>
   <div class="grid gap-6 mt-3">
     {
       projects.map((template) => (
@@ -11,12 +15,12 @@ import { projects } from "@/data/projects.json";
           <div class="text-neutral-500  items-start grid grid-cols-1 md:grid-cols-3">
             <div>
               <p class="text-neutral-500 dark:text-neutral-400">
-                {template.state}
+                {template.state ? t("pFinished") : t("pInProgress")}
               </p>
             </div>
             <div class="md:col-span-2 w-full">
               <p class="text-black dark:text-white">
-                {template.title}
+                {lang === "es" ? template.title : template.titleEng}
               </p>
               <div class="flex gap-2 flex-wrap">
                 {

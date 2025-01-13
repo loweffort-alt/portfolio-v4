@@ -2,15 +2,18 @@
 // import BaseHead from "../../components/BaseHead.astro";
 // import ToggleTheme from "../../components/ui/ToggleTheme.astro";
 // import ToggleLanguage from "../../components/ui/ToggleLanguage.astro";
-// import Topbar from "../../components/ui/Topbar.astro";
+import Topbar from "../../components/ui/Topbar.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-  <div class="min-h-lvh flex justify-center">
+  <Topbar />
+  <div
+    class="min-h-lvh w-full md:w-3/4 m-auto flex justify-center mt-10 p-5 md:p-0"
+  >
     <iframe
       src="/CV-AlexFarfan.pdf"
-      width="50%"
+      width="100%"
       height="auto"
       style="border: none;"></iframe>
   </div>
