@@ -7,8 +7,8 @@ export interface Template {
 // 1 == Terminado
 // 0 == En Progreso
 const one: Template = {
-  link: "https://lalaeventplanner.com/",
-  title: "Lala Event Planner",
+  link: "https://neo-devs-hero-ai.vercel.app/",
+  title: "HeroAI",
   status: 1,
 };
 const two: Template = {
@@ -22,8 +22,8 @@ const three: Template = {
   status: 1,
 };
 const four: Template = {
-  link: "https://loweffort-alt.github.io/web-accel/",
-  title: "Android | QuakeSense",
+  link: "http://18.191.103.225:3000/",
+  title: "GeoShake",
   status: 0,
 };
 export const bytitle = {
