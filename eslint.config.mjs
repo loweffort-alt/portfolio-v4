@@ -19,7 +19,7 @@ export default [
   },
   ...tseslint.configs.recommended.map((config) => ({
     ...config,
-    files: ["**/*.ts"],
+    files: ["**/*.{ts,tsx,mts,cts}"],
     // Scripts embedded in .astro files are linted as virtual `*.astro/*.ts`
     // files by eslint-plugin-astro's own config below, which already sets
     // up the right parser/globals/processor for them.
