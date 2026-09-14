@@ -14,7 +14,7 @@ const three: Template = {
   title: "farfan_alexander@outlook.com",
 };
 const four: Template = {
-  link: "/CV-AlexFarfan.pdf",
+  link: `${import.meta.env.BASE_URL}CV-AlexFarfan.pdf`,
   type: "CV",
   title: "Curriculum Vitae",
 };
