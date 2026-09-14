@@ -20,8 +20,10 @@ const t = useTranslations(lang);
           class="h-16 w-16 lg:h-24 lg:w-24 rounded-full aspect-square transition-all duration-300 border border-white/10"
           src={circleLogo}
           alt="Foto de perfil de Alexander Farfán Navarro"
-          widths={[64, 96]}
+          widths={[64, 96, 128, 192, 288, 381]}
           sizes="(min-width: 1024px) 96px, 64px"
+          loading="eager"
+          fetchpriority="high"
         />
         <span
           class="absolute inset-0 rounded-full shadow-inner"
