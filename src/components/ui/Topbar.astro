@@ -1,7 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import ToggleTheme from "./ToggleTheme.astro";
 import ToggleLanguage from "./ToggleLanguage.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import circleLogo from "@/assets/circle-logo.png";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -14,10 +16,12 @@ const t = useTranslations(lang);
   <div class="flex items-center gap-5">
     <div class="shrink-0">
       <div class="relative">
-        <img
+        <Image
           class="h-16 w-16 lg:h-24 lg:w-24 rounded-full aspect-square transition-all duration-300 border border-white/10"
-          src="/images/circle-logo.png"
-          alt="image"
+          src={circleLogo}
+          alt="Foto de perfil de Alexander Farfán Navarro"
+          widths={[64, 96]}
+          sizes="(min-width: 1024px) 96px, 64px"
         />
         <span
           class="absolute inset-0 rounded-full shadow-inner"
