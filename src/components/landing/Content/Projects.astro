@@ -20,7 +20,7 @@ const t = useTranslations(lang);
             </div>
             <div class="md:col-span-2 w-full">
               <p class="text-black dark:text-white">
-                {lang === "es" ? template.title : template.titleEng}
+                {template.title[lang]}
               </p>
               <div class="flex gap-2 flex-wrap">
                 {
