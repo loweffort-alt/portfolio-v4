@@ -1,12 +1,16 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import Header from "@/components/landing/Header.astro";
-import Content from "@/components/landing/Content.astro";
-import Topbar from "@/components/ui/Topbar.astro";
+const target = `${import.meta.env.BASE_URL}en`;
 ---
 
-<BaseLayout>
-  <Topbar />
-  <Header />
-  <Content />
-</BaseLayout>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0;url=${target}`} />
+    <link rel="canonical" href={target} />
+    <title>Darío Alexander Farfán Navarro | Software Engineer</title>
+  </head>
+  <body>
+    <p>Redirecting to <a href={target}>{target}</a>…</p>
+  </body>
+</html>
