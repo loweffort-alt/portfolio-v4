@@ -16,7 +16,7 @@ export const contact: Template[] = [
     title: "loweffort-alt",
   },
   {
-    link: "/CV-AlexFarfan.pdf",
+    link: `${import.meta.env.BASE_URL}CV-AlexFarfan.pdf`,
     type: "CV",
     title: "Curriculum Vitae",
   },
