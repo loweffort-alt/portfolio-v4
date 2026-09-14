@@ -21,7 +21,7 @@ interface Text {
   pInProgress: string;
 }
 
-export const ui: Record<string, Text> = {
+export const ui: Record<"en" | "es", Text> = {
   en: {
     role: "Software Engineer",
     about: "Hello! I’m a freelance software engineer with a passion for creating innovative technological solutions. I like to define myself as an assertive, patient person with knowledge in various areas.",
